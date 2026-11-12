@@ -28,9 +28,8 @@ const features = [
 
 const plans = [
   { name: "Starter", price: "£49", desc: "Up to 15 employees", features: ["Workforce memory timeline", "Risk alerts", "Email support"] },
-  { name: "Growth", price: "£149", desc: "Up to 50 employees", featured: true, features: ["Everything in Starter", "AI HR search", "Payroll verification"] },
-  { name: "Pro", price: "£299", desc: "Up to 150 employees", features: ["Everything in Growth", "Compliance tracking", "Priority support"] },
-  { name: "Trust / Group", price: "£499", desc: "Multi-entity orgs", features: ["Everything in Pro", "Group reporting", "Dedicated success manager"] },
+  { name: "Professional", price: "£149", desc: "Up to 50 employees", featured: true, features: ["Everything in Starter", "AI HR search", "Payroll verification", "Compliance tracking"] },
+  { name: "Enterprise", price: "£499", desc: "Multi-entity orgs", features: ["Everything in Professional", "Group reporting", "Priority support", "Dedicated success manager"] },
 ];
 
 function Landing() {
@@ -138,7 +137,7 @@ function Landing() {
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Simple, transparent pricing</h2>
             <p className="mt-4 text-muted-foreground">Pick the plan that matches your team size. Cancel anytime.</p>
           </div>
-          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
             {plans.map((p) => (
               <Card key={p.name} className={`relative flex flex-col p-6 ${p.featured ? "border-brand shadow-xl shadow-brand/15" : ""}`}>
                 {p.featured && (
